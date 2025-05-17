@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #63c286, #38a169);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .container {
+      background: white;
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      max-width: 400px;
+      width: 90%;
+      animation: slideIn 1s ease;
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .checkmark {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 20px auto;
+    }
+
+    .circle {
+      stroke-dasharray: 157;
+      stroke-dashoffset: 157;
+      animation: drawCircle 1s ease-out forwards;
+    }
+
+    .tick {
+      stroke-dasharray: 50;
+      stroke-dashoffset: 50;
+      animation: drawTick 0.5s ease-out 1s forwards;
+    }
+
+    @keyframes drawCircle { to { stroke-dashoffset: 0; } }
+    @keyframes drawTick { to { stroke-dashoffset: 0; } }
+
+    h1 {
+      color: #2ecc71;
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    p {
+      color: #444;
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      line-height: 1.5;
+    }
+
+    a {
+      text-decoration: none;
+      background-color: #2ecc71;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 1rem;
+    }
+
+    a:hover {
+      background-color: #27ae60;
+    }
+
+    /* ✅ Responsive Tweaks */
+    @media (max-width: 480px) {
+      .container {
+        padding: 30px 20px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+      }
+
+      a {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+      }
+
+      .checkmark {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <svg class="checkmark" viewBox="0 0 52 52">
+      <circle class="circle" cx="26" cy="26" r="25" fill="none" stroke="#2ecc71" stroke-width="2"/>
+      <path class="tick" fill="none" stroke="#2ecc71" stroke-width="5" d="M14 27l7 7 17-17"/>
+    </svg>
+
+    <h1>🎉 Thank You!</h1>
+    <p>Your message has been received with love.<br>I’ll connect with you as soon as possible. 😊</p>
+    <a href="https://sujal68.github.io/og-protfolio/">
+      <span>🏠</span> Back to Home
+    </a>
+  </div>
+</body>
+</html>
